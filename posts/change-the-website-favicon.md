@@ -12,8 +12,8 @@ The following function changes the favicon to `url`:
 
 ```js
 const setFavicon = function(url) {
-    // Find the current favicon element
-    const favicon = document.querySelector('link[rel="icon"]');
+    // Find the current favicon element rel="shortcut icon" or rel = "icon" or rel = "icon shortcut"
+    const favicon = document.querySelector('link[rel~="icon"]');
     if (favicon) {
         // Update the new link
         favicon.href = url;
